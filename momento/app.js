@@ -7,8 +7,8 @@ const loginButton = document.querySelector("#login-form button");
 
 function onLoginBtnClick(){
 
-    if()
-    console.dir("hello" + loginInput.value);
+    const username = loginInput.value;
+    console.log(username);
     
 }
 
