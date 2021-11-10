@@ -2,14 +2,41 @@
 // const loginInput = loginForm.querySelector("input");
 // const loginButton = loginForm.querySelector("button");
 
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
+const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
 
-function onLoginBtnClick(){
+const HIDDEN_CALSSNAME = "hidden";
+const USERNAME_KEY = "username";
 
+
+
+function onLoginSubmit(event){
+
+    event.preventDefault();//기본 동작을 막음
+    loginForm.classList.add("hidden");
     const username = loginInput.value;
-    console.log(username);
-    
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
+
 }
 
-loginButton.addEventListener("click", onLoginBtnClick);
+function paintGreetings(username){
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CALSSNAME);
+
+}
+ 
+
+const saveUsername = localStorage.getItem(USERNAME_KEY);
+
+if(saveUsername === null){
+    loginForm.classList.remove(HIDDEN_CALSSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}else{
+    paintGreetings(saveUsername);
+}
+
+
+
