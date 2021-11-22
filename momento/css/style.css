@@ -1,3 +1,145 @@
+/*초기화*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: "고도 b";
+	vertical-align: baseline;
+    color: aliceblue;
+    text-align: center;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 .hidden{
     display: none;
 }
+
+#weather{
+    margin-top: 3%;
+    display: inline-block;
+    margin-left: 90%;
+    font-size: 12px;
+}
+
+#clock{
+    font-size: 80px;
+    display: inline-block;
+    margin-top: 15%;
+}
+
+#login-form, #todo-form{
+margin-top: 50px;
+}
+
+#login-form input{
+    border: none;
+    background: transparent;
+    border-bottom:  5px solid #ffffff;
+    color: #ffffff;
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#login-form input:focus, #todo-form input:focus{
+    outline: none;
+}
+#login-form input::placeholder{
+    color: #ffffff;
+    font-size: 30px;
+}
+
+#greeting{
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+#todo-form input{
+    border: none;
+    background: transparent;
+    border-bottom:  5px solid #ffffff;
+    color: #ffffff;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+#todo-form input::placeholder{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#todo-list{
+    margin-top: 50px;
+    width: 404px;
+    height: 235px;
+    font-size: 15px;
+    overflow-y: scroll;
+}
+#todo-list li{
+    margin-bottom: 8px;
+}
+
+#todo-list li button{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    float: right;
+    color: #ffffff;
+    font-size: 15px;
+
+}
+#todo-list::-webkit-scrollbar{
+    width: 5px;
+}
+#todo-list::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255); /*스크롤바의 색상*/
+}
+
+
+
+
+#quotes{
+    font-size: 15px;
+}
+#quotes span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+
